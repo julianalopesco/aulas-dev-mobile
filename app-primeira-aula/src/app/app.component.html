@@ -1,0 +1,25 @@
+<h1>Aplicação</h1>
+<app-header></app-header>
+
+<router-outlet></router-outlet> <!-- Mantém a página imóvel, alternando entre os módulos -->
+
+<div *ngIf="clientePremium; else naopremium"> <!--usando um if em angular-->
+    Você é um cliente premium e tem acesso a informações diferenciadas
+</div>
+
+<ng-template #naopremium>
+    Não é um cliente premium 
+</ng-template>
+
+<ul *ngFor="let valor of valores"> <!--Fazendo um for para exibir a lista-->
+    <li>{{valor.id}} - {{valor.nome}} - {{valor.descricao}}</li>
+</ul>
+
+<app-binding></app-binding>
+
+<h1>Exemplo de pipe</h1>
+
+<p>Data: {{umadata | date }} </p>
+<p>Currency: {{umDinheiro | currency }} </p>
+
+<button (click)="sayHello()">Diga olá pelo service</button>
