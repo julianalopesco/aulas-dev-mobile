@@ -1,6 +1,7 @@
 <h1>Aplicação</h1>
 <app-header></app-header>
 
+<a [routerLink]="['pai']">Ir para componente pai</a> <br/> 
 <router-outlet></router-outlet> <!-- Mantém a página imóvel, alternando entre os módulos -->
 
 <div *ngIf="clientePremium; else naopremium"> <!--usando um if em angular-->

@@ -8,13 +8,19 @@ import { ComponentModule } from './components/components.module';
 import { FormsModule} from '@angular/forms';
 import { ClientListPage } from './pages/client-list-page.component';
 import { BindingPageComponent } from './pages/binding-page.component';
+import { Filho1PageComponent } from './pages/filho1-page.component';
+import { Filho2PageComponent } from './pages/filho2-page.component';
+import { PaiPageComponent } from './pages/pai.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientListPage,
-    BindingPageComponent
+    BindingPageComponent,
+    PaiPageComponent,
+    Filho1PageComponent,
+    Filho2PageComponent
   ],
   imports: [
     BrowserModule,
