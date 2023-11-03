@@ -11,6 +11,9 @@ import { BindingPageComponent } from './pages/binding-page.component';
 import { Filho1PageComponent } from './pages/filho1-page.component';
 import { Filho2PageComponent } from './pages/filho2-page.component';
 import { PaiPageComponent } from './pages/pai.component';
+import { ListaPessoasPage } from './pages/lista-pessoas-page.component';
+import { ClientService } from './services/cliente.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,15 +23,21 @@ import { PaiPageComponent } from './pages/pai.component';
     BindingPageComponent,
     PaiPageComponent,
     Filho1PageComponent,
-    Filho2PageComponent
+    Filho2PageComponent,
+    ClientListPage,
+    LoginPageComponent,
+    ClienteDetalhePageComponent,
+    RXJSPageComponent,
+    ListaPessoasPage
   ],
   imports: [
     BrowserModule,
     ComponentModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ClientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,10 @@
+<div>
+    <button (click)="listar()">Listar</button> <!--O botão chama o método da page component-->
+</div>
+
+<ul>
+    <li *ngFor="let pessoa of pessoas | assync"> <!--For em angular, para exibir a lista a partir do Json-->
+        Nome: {{pessoa.nome}}, idade: {{pessoa.idade}}
+        <button (click)="salvar(pessoa)">Salvar</button>
+    </li> 
+</ul>
