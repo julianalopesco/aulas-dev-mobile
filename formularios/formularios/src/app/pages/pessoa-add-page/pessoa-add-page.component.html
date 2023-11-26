@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup" (ngSubmit)="salvar()"> <!--formulário associado a um formGroup-->
+    <div>
+        <mat-form-field>
+            <mat-label> Nome</mat-label>
+            <input matInput type="text" placeholder="Nome" name="nome" formControlName="nome"><!--[(ngModel)]="pessoa.nome" /> ngmodel: define para onde o model vai-->
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label> Email</mat-label>
+            <input matInput type="text" placeholder="Email" name="email" formControlName="email"/>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Hobbies</mat-label>
+            <mat-select formControlName="hobie" name="hobie">
+                <mat-option *ngFor="let hobie of hobies" [value]="hobie">{{hobie}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <button type="submit" mat-button color="primary">Salvar</button>
+    </div>
+</form>

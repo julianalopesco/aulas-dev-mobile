@@ -14,7 +14,9 @@ import { PaiPageComponent } from './pages/pai.component';
 import { ListaPessoasPage } from './pages/lista-pessoas-page.component';
 import { ClientService } from './services/cliente.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginPageComponent} from './pages/login-page.component';
+import { ClienteDetalhePageComponent} from './pages/client-detalhe-page.component';
+import { RXJSPageComponent} from './pages/rxjs-page.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,6 @@ import { HttpClientModule } from '@angular/common/http';
     Filho1PageComponent,
     Filho2PageComponent,
     ClientListPage,
-    LoginPageComponent,
-    ClienteDetalhePageComponent,
     RXJSPageComponent,
     ListaPessoasPage
   ],

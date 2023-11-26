@@ -37,8 +37,8 @@ export class RXJSPageComponent implements OnInit, OnDestroy {
         /*this.observable2.subscribe(item => {
             this.items.push(item)
         })*/
-        this.subject.asObservable().subscribe({item} => {
-            this.ultimoEvento = item
+        this.subject.asObservable().subscribe(({item}) => {
+            this.ultimoEvento = item;
         })
     }
 
